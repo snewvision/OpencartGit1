@@ -1,0 +1,11 @@
+{
+    "BaseURL": "https://demo.opencart.com/en-gb?route=account/register",
+
+    "RegisterDetails":{
+        "FirstName" : "John",
+        "LastName" : "Doe",
+        "E-Mail" : "john@gmail.com",
+        "Password" : "John@123"
+    }
+
+}
