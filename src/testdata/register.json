@@ -1,11 +1,13 @@
 {
-    "BaseURL": "https://demo.opencart.com/en-gb?route=account/register",
+    "BaseURL": "https://tutorialsninja.com/demo/",
 
     "RegisterDetails":{
         "FirstName" : "John",
         "LastName" : "Doe",
-        "E-Mail" : "john@gmail.com",
-        "Password" : "John@123"
+        "EMail" : "john1003@gmail.com",        
+        "TelePhone" : "1234567890",
+        "Password" : "John@1238",
+        "ConfirmPassword" : "John@1238"
     }
 
 }

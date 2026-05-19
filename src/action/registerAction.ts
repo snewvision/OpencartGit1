@@ -2,12 +2,14 @@ import {Page, expect} from '@playwright/test';
 import {registerPage} from '../page/registerPage';
 import testdata  from "../testdata/register.json"
 
-// type RegisterDetails = {
-//     FirstName : string,
-//     LastName : string,
-//     Email : string,
-//     Password : string
-// }
+type RegisterDetails = {
+    FirstName : string,
+    LastName : string,
+    EMail : string,
+    TelePhone : string,
+    ConfirmPassword : string,
+    Password : string
+}
 
 export class registerAction{
     private readonly registerPages: registerPage;
@@ -16,19 +18,25 @@ export class registerAction{
         this.registerPages = new registerPage(page);
     }
 
-    async registerUser(testdata: any)
+    async registerUser(testdata: RegisterDetails)
     {
+        await this.registerPages.myAccountDropdown.click()
+        await this.registerPages.registerDropDown.click();
+        
+
         // Validate the register page is visible
         await expect(this.registerPages.registerLogo).toBeVisible();
 
         // fill the register form
-        await this.registerPages.firstName.fill(testdata.FirstName.toString());
-        await this.registerPages.lastName.fill(testdata.LastName.toString());
-        await this.registerPages.email.fill(testdata.Email.toString());
-        await this.registerPages.password.fill(testdata.Password.toString());
+        await this.registerPages.firstName.fill(testdata.FirstName);
+        await this.registerPages.lastName.fill(testdata.LastName);
+        await this.registerPages.email.fill(testdata.EMail);
+        await this.registerPages.telePhone.fill(testdata.TelePhone);
+        await this.registerPages.password.fill(testdata.Password);
+        await this.registerPages.confirmPassword.fill(testdata.ConfirmPassword);
 
         //click the check box
-        await this.registerPages.checkBox.click();
+        await this.registerPages.checkBox.check();
 
         // click the continue button
         await this.registerPages.continueRegisterButton.click();

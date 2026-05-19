@@ -1,10 +1,13 @@
-import {test} from "../src/fixture/fixture";
+import {test,expect} from "../src/fixture/fixture";
 import testdata from "../src/testdata/register.json"
 
-test("Register anew user", async({appActions}) => {
+test("Register a new user", async({appActions,page}) => {
   // call the register user action
-  await appActions.register.registerUser(testdata);
+  await page.goto(testdata.BaseURL);
+  await page.waitForLoadState();
+  await appActions.register.registerUser(testdata.RegisterDetails);
 
 });
+
 
 
