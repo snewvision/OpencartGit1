@@ -1,9 +1,14 @@
 {
-    "BaseURL": "https://demo.opencart.com/en-gb?route=account/login",
+    "BaseURL": "https://tutorialsninja.com/demo/",
 
     "LoginDetails" : {
-        "Email Address" : "john@gmail.com",
-        "Password" : "John@123"
+        "EmailAddress" : "john1003@gmail.com",
+        "Password" : "John@1238"
+    },
+    "incorrectLoginDetails" : {
+        "EmailAddress" : "sam1003@gmail.com",
+        "Password" : "John@1238"
+
     }
 
 }

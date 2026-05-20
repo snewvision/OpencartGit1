@@ -3,10 +3,12 @@ import { registerAction } from "../action/registerAction";
 import testdata from "../testdata/register.json";
 import { Addtocart } from "../page/addtocartPage";
 import { CartAction } from "../action/addtocartAction";
+import { loginAction } from "../action/loginAction";
 
 type appActions = {
     register: registerAction;
     addtocart: CartAction;
+    login: loginAction;
 }
 
 type Fixtures = {
@@ -18,6 +20,7 @@ export const test = base.extend<Fixtures>({
         const appActions: appActions = {
             register : new registerAction(page),
             addtocart: new CartAction(new Addtocart(page)),
+            login : new loginAction(page)
         }
         await use(appActions);
     }
