@@ -1,0 +1,9 @@
+{
+    "BaseURL": "https://demo.opencart.com/en-gb?route=account/login",
+
+    "LoginDetails" : {
+        "Email Address" : "john@gmail.com",
+        "Password" : "John@123"
+    }
+
+}
