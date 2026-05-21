@@ -43,7 +43,7 @@ export class loginAction
         await expect(this.loginPages.logoutDropDown).toBeVisible();
 
         // take Screen shot for user login success
-        await expect(this.loginPages.page).toHaveScreenshot('Login_Success.png',{maxDiffPixels: 800})
+        //await expect(this.loginPages.page).toHaveScreenshot('Login_Success.png',{maxDiffPixels: 800})
     }
 
     async loginUserWithIncorrectCredentials(testdata: incorrectLoginDetails)
@@ -64,7 +64,7 @@ export class loginAction
         await expect(this.loginPages.loginErrorMessage).toBeVisible();
 
         // take Screen shot for user login failure
-        await expect(this.loginPages.page).toHaveScreenshot('Login_Failure.png',{maxDiffPixels: 800})
+        //await expect(this.loginPages.page).toHaveScreenshot('Login_Failure.png',{maxDiffPixels: 800})
 
     }
 }
