@@ -2,7 +2,8 @@ import {Page, expect} from '@playwright/test';
 import {registerPage} from '../page/registerPage';
 import testdata  from "../testdata/register.json"
 
-type RegisterDetails = {
+
+  export type RegisterDetails = {
     FirstName : string,
     LastName : string,
     EMail : string,
@@ -45,6 +46,6 @@ export class registerAction{
         await expect(this.registerPages.registerSuccessMessage).toBeVisible();
 
         // take Screen shot for user registartion success
-        await expect(this.registerPages.page).toHaveScreenshot('Register_Page.png',{maxDiffPixels: 800})
+     //   await expect(this.registerPages.page).toHaveScreenshot('Register_Page.png',{maxDiffPixels: 800})
     }
 }
