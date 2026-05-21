@@ -1,4 +1,5 @@
 {
 "baseURL":"https://tutorialsninja.com/demo/",
-"SearchProduct":"iphone"
+"SearchProduct":"iphone",
+"SearchProduct2": "mac book"
 }
