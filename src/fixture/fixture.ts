@@ -7,11 +7,13 @@ import { faker } from "@faker-js/faker";
 import { RegisterDetails } from '../action/registerAction';
 
 
+import { loginAction } from "../action/loginAction";
 
 type appActions = {
     register: registerAction;
     addtocart: CartAction;
     
+    login: loginAction;
 }
 
 type Fixtures = {
