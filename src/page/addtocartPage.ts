@@ -10,6 +10,14 @@ export class Addtocart{
     readonly Addtocart:Locator
     readonly checkoutlink:Locator
 
+    //search product2
+    readonly macbookText: Locator;
+    readonly defaultDropDown: Locator;
+    readonly showDropDown: Locator;
+    readonly clickOnMacbook: Locator;
+    readonly productCodeVisibility: Locator;
+    readonly productAvailabilty: Locator;
+
     constructor(page:Page){
         this.page=page
         this.searchbox=page.getByPlaceholder("Search")
@@ -17,10 +25,19 @@ export class Addtocart{
         this.Mobiletext=page.locator("//a[text()='iPhone']")
         this.Mobileimage=page.getByTitle("iPhone")
         this.Addtocart=page.getByRole('button',{name:'Add to Cart'})
-        this.succesmsg=page.locator("//div[text()='Success: You have added ']")
+        this.succesmsg=page.locator("//div[contains(text(), 'Success: You have added ')]")//Locator updated 
         this.Addtocart=page.locator("//button[@id='button-cart']")
         this.checkoutlink=page.locator("//strong[text()=' Checkout']")
 
+        //search product2
+        this.macbookText = page.locator('//a[text() = "MacBook"]//ancestor::div[@class="product-thumb"]')
+        this.defaultDropDown = page.locator('//select[@id="input-sort"]');
+        this.showDropDown = page.locator('//select[@id="input-limit"]');
+        this.clickOnMacbook = page.locator('//a[contains(text() , "MacBook Air")]');
+        this.productCodeVisibility = page.locator('//ul[@class="list-unstyled"]/following::li[contains(text() , "Product Code:Product 17")]');
+        this.productAvailabilty = page.locator('//ul[@class="list-unstyled"]/following::li[contains(text() , "Availability:Out Of Stock")]');
+
+   
     }
 
 
