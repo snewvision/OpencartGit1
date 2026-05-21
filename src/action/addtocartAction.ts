@@ -10,8 +10,9 @@ export class CartAction{
         await this.addtocartpage.searchicon.click()
         expect(this.addtocartpage.Mobiletext).toBeVisible()
         await this.addtocartpage.Mobileimage.click()
-        await this.addtocartpage.Addtocart.click();
-        expect(this.addtocartpage.succesmsg).toBeVisible()
+        await this.addtocartpage.Addtocart1.click();
+        await this.addtocartpage.page.waitForLoadState();
+        expect(this.addtocartpage.succesmsg).toBeVisible();
         
        // await this.addtocartpage.checkoutlink.click()
 
