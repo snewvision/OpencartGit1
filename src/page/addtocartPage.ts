@@ -7,7 +7,7 @@ export class Addtocart{
     readonly Mobileimage:Locator
     readonly Addtocart:Locator
     readonly succesmsg:Locator
-    readonly Addtocart:Locator
+    readonly Addtocart1:Locator
     readonly checkoutlink:Locator
 
     //search product2
@@ -25,8 +25,8 @@ export class Addtocart{
         this.Mobiletext=page.locator("//a[text()='iPhone']")
         this.Mobileimage=page.getByTitle("iPhone")
         this.Addtocart=page.getByRole('button',{name:'Add to Cart'})
-        this.succesmsg=page.locator("//div[contains(text(), 'Success: You have added ')]")//Locator updated 
-        this.Addtocart=page.locator("//button[@id='button-cart']")
+        this.succesmsg=page.locator('//div[@class="alert alert-success alert-dismissible"]')//Locator updated 
+        this.Addtocart1=page.locator("//button[@id='button-cart']")
         this.checkoutlink=page.locator("//strong[text()=' Checkout']")
 
         //search product2

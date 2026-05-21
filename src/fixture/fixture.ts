@@ -17,18 +17,18 @@ type appActions = {
 }
 
 type Fixtures = {
-    appActions : appActions;
+    appAction : appActions;
     randomUser:RegisterDetails
 }
 
 export const test = base.extend<Fixtures>({
-    appActions: async ({page}, use) => {
-        const appActions: appActions = {
+    appAction: async ({page}, use) => {
+        const appAction: appActions = {
             register : new registerAction(page),
+            login: new loginAction(page),
             addtocart: new CartAction(new Addtocart(page))
-            
         }
-        await use(appActions);
+        await use(appAction);
     },
     randomUser: async ({}, use) => {
          const password = faker.internet.password({ length: 10 });
