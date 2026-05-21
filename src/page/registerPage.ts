@@ -35,8 +35,8 @@ export class registerPage
         this.confirmPassword = page.locator('//input[contains(@placeholder,"Password Confirm")]');
         this.checkBox = page.locator('//input[@type="checkbox"]')
         this.continueRegisterButton = page.locator('//input[contains(@value,"Continue")]');
-        this.registerSuccessMessage = page.locator('//p[contains(text(), "Congratulations! Your new account has been successfully created!")]');
-
+      //  this.registerSuccessMessage = page.locator('//p[contains(text(), "Congratulations! Your new account has been successfully created!")]');
+        this.registerSuccessMessage=page.getByText("Congratulations! Your new account has been successfully created!")
 
     }
 }
