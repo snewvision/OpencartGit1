@@ -12,7 +12,7 @@ export class CartAction{
         await this.addtocartpage.Mobileimage.click()
         await this.addtocartpage.Addtocart1.click();
         await this.addtocartpage.page.waitForLoadState();
-        expect(this.addtocartpage.succesmsg).toBeVisible();
+        expect(this.addtocartpage.iconItemCount).toContainText(" 1 item(s) - $123.20");
         
        // await this.addtocartpage.checkoutlink.click()
 
